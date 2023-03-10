@@ -14,7 +14,17 @@ namespace AmazingSimpleHelper.Tests
 
 		public string Invoke()
 		{
-			return $"{this.GetType().Name} - {Name}: {Test()}";
+			string result;
+			try
+			{
+				result = $"OK ({Test()})";
+			}
+			catch (Exception e) 
+			{
+				result = $"ОШИБКА ({e.Message})";
+			}
+
+			return $"{this.GetType().Name} - {Name}: {result}";
 		}
 	}
 }
