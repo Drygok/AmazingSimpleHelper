@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 
 namespace AmazingSimpleHelper.Tests
 {
+	/// <summary>
+	/// Родитель всех тестов
+	/// </summary>
 	public abstract class AbstractTest
 	{
-		public abstract string Name { get; }
+		public virtual string Name => "Неизвестный тест";
 		public abstract string Test();
 
+		/// <summary>
+		/// Базовый метод исполнения теста
+		/// </summary>
+		/// <returns>Текст с результатом исполнения</returns>
 		public string Invoke()
 		{
 			string result;

@@ -64,7 +64,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\AbstractTest.cs" />
-    <Compile Include="Tests\StartHelper.cs" />
+    <Compile Include="Tests\ErrorTest.cs" />
+    <Compile Include="Tests\StartHelperTest.cs" />
     <Compile Include="Util\Trinity\TrinityResponse.cs" />
     <Compile Include="Util\Trinity\TrinityResponseCode.cs" />
     <Compile Include="Util\Web.cs" />

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AmazingSimpleHelper.Util.Trinity
 {
+	/// <summary>
+	/// Коды ответа от Тринити
+	/// </summary>
 	public enum TrinityResponseCode
 	{
 		OK,
