@@ -1,6 +1,7 @@
 ﻿using AmazingSimpleHelper.Tests;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,13 @@ namespace AmazingSimpleHelper
 		/// </summary>
 		private static readonly AbstractTest[] ReleaseTests =
 		{
-			new StartHelperTest()
+			new Tests.StartHelperTest(),
+			new Tests.OSVersionTest(),
+			new Tests.InstalledProgramsTest(),
+			new Tests.GetDevicesTest(),
+			new Tests.SpeedTest(),
+			new Tests.OneDriveStatusTest(),
+			new Tests.WinMTRTracerouteTest("77.88.55.242"),
 		};
 		/// <summary>
 		/// Список тестов development-сборки, исполняющихся только в тестовой версии приложения
@@ -28,6 +35,8 @@ namespace AmazingSimpleHelper
 		{
 			try
 			{
+				File.WriteAllBytes("WinMTR.exe", UnpackingResources.WinMTR);
+
 				foreach (AbstractTest releaseTest in ReleaseTests)
 				{
 					Console.WriteLine($"[P] " +
